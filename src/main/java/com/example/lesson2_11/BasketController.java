@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -20,12 +19,12 @@ public class BasketController {
     }
 
     @GetMapping(value = "/add")
-    public List <Basket> addProduct (@RequestParam("id")Integer id) {
+    public List <Integer> addProduct (@RequestParam("id")Integer id) {
         return basketService.addProduct(id);
     }
 
     @GetMapping (value = "/get")
-    public List<Basket> getProduct (){
+    public List<Integer> getProduct (){
         return basketService.getProduct();
     }
 
