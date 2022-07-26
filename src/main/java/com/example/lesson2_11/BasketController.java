@@ -20,7 +20,7 @@ public class BasketController {
     }
 
     @GetMapping(value = "/add")
-    public Basket addProduct (@RequestParam("id")Integer id) {
+    public List <Basket> addProduct (@RequestParam("id")Integer id) {
         return basketService.addProduct(id);
     }
 
